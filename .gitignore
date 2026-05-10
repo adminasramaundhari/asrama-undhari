@@ -1,0 +1,11 @@
+/node_modules
+/vendor
+.env
+/storage/*.log
+/public/build
+/public/hot
+.DS_Store
+.idea
+*.zip
+composer.lock
+package-lock.json

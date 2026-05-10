@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: #FF2A00;
+        --primary-dark: #CC2200;
+        --primary-light: #FF5533;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f3f4f6;
+        --text-primary: #111827;
+        --text-secondary: #6b7280;
+        --border-color: #e5e7eb;
+    }
+
+    .dark {
+        --bg-primary: #1f2937;
+        --bg-secondary: #111827;
+        --text-primary: #f9fafb;
+        --text-secondary: #9ca3af;
+        --border-color: #374151;
+    }
+
+    body {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+}
+
+/* Dark mode overrides untuk komponen */
+.dark .bg-white {
+    background-color: #1f2937 !important;
+}
+
+.dark .text-gray-900 {
+    color: #f9fafb !important;
+}
+
+.dark .text-gray-700 {
+    color: #d1d5db !important;
+}
+
+.dark .text-gray-600 {
+    color: #9ca3af !important;
+}
+
+.dark .text-gray-500 {
+    color: #6b7280 !important;
+}
+
+.dark .border-gray-300 {
+    border-color: #374151 !important;
+}
+
+.dark .bg-gray-50 {
+    background-color: #111827 !important;
+}
+
+.dark .bg-gray-100 {
+    background-color: #1f2937 !important;
+}
+
+.dark .bg-gray-200 {
+    background-color: #374151 !important;
+}
+
+.dark .hover\:bg-gray-50:hover {
+    background-color: #374151 !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+    background-color: #374151 !important;
+}
+
+.dark .shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Table dark mode */
+.dark table {
+    background-color: #1f2937;
+}
+
+.dark .border {
+    border-color: #374151;
+}
+
+.dark th {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+.dark td {
+    color: #d1d5db;
+}
+
+/* Card dark mode */
+.dark .bg-white.rounded-lg {
+    background-color: #1f2937;
+}
+
+/* Input dark mode */
+.dark input, .dark select, .dark textarea {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #f9fafb !important;
+}
+
+.dark input:focus, .dark select:focus, .dark textarea:focus {
+    border-color: #FF2A00 !important;
+    ring-color: #FF2A00 !important;
+}
+
+/* Button dark mode */
+.dark .bg-gray-500 {
+    background-color: #4b5563;
+}
+
+.dark .bg-gray-500:hover {
+    background-color: #6b7280;
+}
+
+/* Modal dark mode */
+.dark .bg-white.rounded-lg.shadow-lg {
+    background-color: #1f2937;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.toast-enter {
+    animation: slideInRight 0.3s ease-out;
+}
+
+.toast-exit {
+    animation: slideOutRight 0.3s ease-in;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
